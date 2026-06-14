@@ -1,0 +1,9 @@
+=== FILE: prior_visit_2025.pdf (Prior Visit - Annual Physical 2025) ===
+--- Page 1 ---
+Riverside Family Medicine
+Annual Physical - Prior Visit
+Patient: Alex Rivera        Date of Service: 2025-05-10        Provider: Sarah Lee, MD
+Fasting Plasma Glucose: 110 mg/dL (impaired fasting glucose / prediabetes range).
+Hemoglobin A1c: 6.0 % (prediabetes range: 5.7-6.4).
+BMI 30.1 kg/m2. BP 134/84.
+Assessment: Prediabetes. Plan: Counseled on lifestyle modification, diet, and exercise. Recheck in 1 year.

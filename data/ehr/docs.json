@@ -1,0 +1,448 @@
+{
+  "visit_note.pdf": {
+    "label": "After-Visit Clinical Note",
+    "pages": [
+      [
+        {
+          "s": "h1",
+          "t": "Riverside Family Medicine"
+        },
+        {
+          "s": "h2",
+          "t": "After-Visit Clinical Note"
+        },
+        {
+          "s": "hr"
+        },
+        {
+          "s": "label",
+          "t": "Patient: Alex Rivera        DOB: 03/14/1985 (Age 41)        Sex: M"
+        },
+        {
+          "s": "label",
+          "t": "MRN: 00482913        Date of Service: 2026-06-12        Provider: Sarah Lee, MD"
+        },
+        {
+          "s": "sp"
+        },
+        {
+          "s": "h2",
+          "t": "Chief Complaint"
+        },
+        {
+          "s": "body",
+          "t": "Fatigue, increased thirst, and intermittent blurred vision for approximately 6 weeks."
+        },
+        {
+          "s": "h2",
+          "t": "History of Present Illness"
+        },
+        {
+          "s": "body",
+          "t": "41-year-old male presents with a 6-week history of fatigue, polydipsia, polyuria, and intermittent blurred vision. Reports increased nocturia (2-3x/night) and unintentional 6 lb weight loss. No chest pain, no focal neuro deficits. Family history significant for type 2 diabetes (father)."
+        },
+        {
+          "s": "h2",
+          "t": "Vitals"
+        },
+        {
+          "s": "body",
+          "t": "BP 138/86 mmHg   HR 78   Temp 98.4F   BMI 31.2 kg/m2"
+        },
+        {
+          "s": "h2",
+          "t": "Assessment"
+        },
+        {
+          "s": "bullet",
+          "t": "1. Type 2 Diabetes Mellitus, newly diagnosed (E11.9). HbA1c 7.8%."
+        },
+        {
+          "s": "bullet",
+          "t": "2. Essential hypertension (I10)."
+        },
+        {
+          "s": "bullet",
+          "t": "3. Mixed hyperlipidemia (E78.2)."
+        },
+        {
+          "s": "h2",
+          "t": "Plan"
+        },
+        {
+          "s": "bullet",
+          "t": "Initiate metformin 500 mg PO BID with meals; titrate to 1000 mg BID over 4 weeks as tolerated."
+        },
+        {
+          "s": "bullet",
+          "t": "Medical nutrition therapy; >=150 min/week moderate-intensity physical activity."
+        },
+        {
+          "s": "bullet",
+          "t": "Referral to ophthalmology for dilated diabetic retinopathy screening."
+        },
+        {
+          "s": "bullet",
+          "t": "Order urine albumin-to-creatinine ratio (microalbuminuria screen)."
+        },
+        {
+          "s": "bullet",
+          "t": "Repeat HbA1c in 3 months. Continue lisinopril 10 mg daily."
+        },
+        {
+          "s": "bullet",
+          "t": "Follow-up appointment in 3 months, or sooner as needed."
+        }
+      ],
+      [
+        {
+          "s": "h2",
+          "t": "Patient Instructions"
+        },
+        {
+          "s": "body",
+          "t": "You have been diagnosed with type 2 diabetes. This means your blood sugar (glucose) is higher than the normal range. Your HbA1c, a 3-month average of your blood sugar, is 7.8% (a value of 6.5% or higher indicates diabetes)."
+        },
+        {
+          "s": "body",
+          "t": "Start metformin as directed with food to reduce stomach upset. Pick up your prescription at your pharmacy. Take your medication daily."
+        },
+        {
+          "s": "h2",
+          "t": "When to Seek Care"
+        },
+        {
+          "s": "bullet",
+          "t": "Symptoms of low blood sugar: shakiness, sweating, confusion, rapid heartbeat."
+        },
+        {
+          "s": "bullet",
+          "t": "Persistent vomiting, very high blood sugar, or vision changes that worsen."
+        },
+        {
+          "s": "sp"
+        },
+        {
+          "s": "label",
+          "t": "Electronically signed by Sarah Lee, MD on 2026-06-12 18:42"
+        }
+      ]
+    ]
+  },
+  "labs_a1c.pdf": {
+    "label": "Laboratory Results",
+    "pages": [
+      [
+        {
+          "s": "h1",
+          "t": "Riverside Laboratory"
+        },
+        {
+          "s": "h2",
+          "t": "Laboratory Results"
+        },
+        {
+          "s": "hr"
+        },
+        {
+          "s": "label",
+          "t": "Patient: Alex Rivera        MRN: 00482913"
+        },
+        {
+          "s": "label",
+          "t": "Collected: 2026-06-12        Resulted: 2026-06-13        Ordering Provider: Sarah Lee, MD"
+        },
+        {
+          "s": "sp"
+        },
+        {
+          "s": "h2",
+          "t": "Diabetes Panel"
+        },
+        {
+          "s": "bullet",
+          "t": "Hemoglobin A1c: 7.8 %  (H)   Reference: <5.7 normal; 5.7-6.4 prediabetes; >=6.5 diabetes"
+        },
+        {
+          "s": "bullet",
+          "t": "Estimated Average Glucose (eAG): 177 mg/dL"
+        },
+        {
+          "s": "bullet",
+          "t": "Fasting Plasma Glucose: 152 mg/dL  (H)   Reference: 70-99 mg/dL"
+        },
+        {
+          "s": "sp"
+        },
+        {
+          "s": "body",
+          "t": "Interpretation: Results are consistent with type 2 diabetes mellitus. HbA1c of 7.8% is above the diagnostic threshold of 6.5%."
+        }
+      ],
+      [
+        {
+          "s": "h2",
+          "t": "Lipid Panel"
+        },
+        {
+          "s": "bullet",
+          "t": "Total Cholesterol: 222 mg/dL  (H)   Reference: <200"
+        },
+        {
+          "s": "bullet",
+          "t": "LDL Cholesterol: 138 mg/dL  (H)   Reference: <100"
+        },
+        {
+          "s": "bullet",
+          "t": "HDL Cholesterol: 41 mg/dL  (L)   Reference: >40"
+        },
+        {
+          "s": "bullet",
+          "t": "Triglycerides: 180 mg/dL  (H)   Reference: <150"
+        },
+        {
+          "s": "h2",
+          "t": "Comprehensive Metabolic Panel (selected)"
+        },
+        {
+          "s": "bullet",
+          "t": "Creatinine: 0.9 mg/dL   eGFR: 92 mL/min/1.73m2 (normal renal function)"
+        },
+        {
+          "s": "bullet",
+          "t": "Potassium: 4.2 mmol/L   Sodium: 139 mmol/L"
+        }
+      ]
+    ]
+  },
+  "med_list.pdf": {
+    "label": "Medication List",
+    "pages": [
+      [
+        {
+          "s": "h1",
+          "t": "Riverside Family Medicine"
+        },
+        {
+          "s": "h2",
+          "t": "Active Medication List"
+        },
+        {
+          "s": "hr"
+        },
+        {
+          "s": "label",
+          "t": "Patient: Alex Rivera        MRN: 00482913        Updated: 2026-06-12"
+        },
+        {
+          "s": "sp"
+        },
+        {
+          "s": "bullet",
+          "t": "metformin 500 mg tablet - take 1 tablet by mouth twice daily with meals. STATUS: NEW (2026-06-12), prescribed by Sarah Lee, MD."
+        },
+        {
+          "s": "bullet",
+          "t": "lisinopril 10 mg tablet - take 1 tablet by mouth once daily. STATUS: Active since 2024 (hypertension)."
+        },
+        {
+          "s": "sp"
+        },
+        {
+          "s": "h2",
+          "t": "Allergies"
+        },
+        {
+          "s": "bullet",
+          "t": "Penicillin - documented reaction: rash (recorded 2019)."
+        },
+        {
+          "s": "body",
+          "t": "Note: Patient has previously stated this allergy may be inaccurate."
+        }
+      ]
+    ]
+  },
+  "billing.pdf": {
+    "label": "Estimated Costs",
+    "pages": [
+      [
+        {
+          "s": "h1",
+          "t": "Riverside Family Medicine"
+        },
+        {
+          "s": "h2",
+          "t": "Estimated Costs - This Visit & Plan"
+        },
+        {
+          "s": "hr"
+        },
+        {
+          "s": "label",
+          "t": "Patient: Alex Rivera        MRN: 00482913        Plan: BlueCross PPO"
+        },
+        {
+          "s": "sp"
+        },
+        {
+          "s": "h2",
+          "t": "Estimated Out-of-Pocket"
+        },
+        {
+          "s": "bullet",
+          "t": "Office visit today (established patient) - copay: $30 after insurance."
+        },
+        {
+          "s": "bullet",
+          "t": "Metformin 500 mg (generic), 90-day supply - about $12 at CVS with your plan."
+        },
+        {
+          "s": "bullet",
+          "t": "Lab work (HbA1c + lipid panel) - about $25 after insurance."
+        },
+        {
+          "s": "bullet",
+          "t": "Diabetic eye exam (ophthalmology referral) - about $40 copay."
+        },
+        {
+          "s": "sp"
+        },
+        {
+          "s": "bullet",
+          "t": "Estimated total out-of-pocket this month: about $107."
+        },
+        {
+          "s": "body",
+          "t": "Actual amounts vary by plan and deductible status. Generic savings and financial-assistance programs are available - ask the front desk."
+        }
+      ]
+    ]
+  },
+  "problem_list.pdf": {
+    "label": "Problem List",
+    "pages": [
+      [
+        {
+          "s": "h1",
+          "t": "Riverside Family Medicine"
+        },
+        {
+          "s": "h2",
+          "t": "Active Problem List"
+        },
+        {
+          "s": "hr"
+        },
+        {
+          "s": "label",
+          "t": "Patient: Alex Rivera        MRN: 00482913"
+        },
+        {
+          "s": "sp"
+        },
+        {
+          "s": "bullet",
+          "t": "1. Type 2 Diabetes Mellitus (E11.9) - onset 2026-06-12."
+        },
+        {
+          "s": "bullet",
+          "t": "2. Essential Hypertension (I10) - onset 2023."
+        },
+        {
+          "s": "bullet",
+          "t": "3. Mixed Hyperlipidemia (E78.2) - onset 2024."
+        },
+        {
+          "s": "sp"
+        },
+        {
+          "s": "h2",
+          "t": "Allergies"
+        },
+        {
+          "s": "bullet",
+          "t": "Penicillin - recorded 2019 (rash). Patient disputes this allergy."
+        }
+      ]
+    ]
+  },
+  "prior_visit_2025.pdf": {
+    "label": "Prior Visit - Annual Physical 2025",
+    "pages": [
+      [
+        {
+          "s": "h1",
+          "t": "Riverside Family Medicine"
+        },
+        {
+          "s": "h2",
+          "t": "Annual Physical - Prior Visit"
+        },
+        {
+          "s": "hr"
+        },
+        {
+          "s": "label",
+          "t": "Patient: Alex Rivera        Date of Service: 2025-05-10        Provider: Sarah Lee, MD"
+        },
+        {
+          "s": "sp"
+        },
+        {
+          "s": "bullet",
+          "t": "Fasting Plasma Glucose: 110 mg/dL (impaired fasting glucose / prediabetes range)."
+        },
+        {
+          "s": "bullet",
+          "t": "Hemoglobin A1c: 6.0 % (prediabetes range: 5.7-6.4)."
+        },
+        {
+          "s": "bullet",
+          "t": "BMI 30.1 kg/m2. BP 134/84."
+        },
+        {
+          "s": "body",
+          "t": "Assessment: Prediabetes. Plan: Counseled on lifestyle modification, diet, and exercise. Recheck in 1 year."
+        }
+      ]
+    ]
+  },
+  "prior_visit_2024.pdf": {
+    "label": "Prior Visit 2024",
+    "pages": [
+      [
+        {
+          "s": "h1",
+          "t": "Riverside Family Medicine"
+        },
+        {
+          "s": "h2",
+          "t": "Office Visit - Prior Visit"
+        },
+        {
+          "s": "hr"
+        },
+        {
+          "s": "label",
+          "t": "Patient: Alex Rivera        Date of Service: 2024-04-22        Provider: Sarah Lee, MD"
+        },
+        {
+          "s": "sp"
+        },
+        {
+          "s": "bullet",
+          "t": "Fasting Plasma Glucose: 102 mg/dL."
+        },
+        {
+          "s": "bullet",
+          "t": "BP 142/90 mmHg (elevated). Started lisinopril 10 mg daily for hypertension."
+        },
+        {
+          "s": "body",
+          "t": "Assessment: Essential hypertension, newly treated. Borderline fasting glucose; monitor."
+        }
+      ]
+    ]
+  }
+}

@@ -1,0 +1,114 @@
+=== FILE: visit_note.pdf (After-Visit Clinical Note) ===
+--- Page 1 ---
+Riverside Family Medicine
+After-Visit Clinical Note
+Patient: Alex Rivera        DOB: 03/14/1985 (Age 41)        Sex: M
+MRN: 00482913        Date of Service: 2026-06-12        Provider: Sarah Lee, MD
+Chief Complaint
+Fatigue, increased thirst, and intermittent blurred vision for approximately 6 weeks.
+History of Present Illness
+41-year-old male presents with a 6-week history of fatigue, polydipsia, polyuria, and intermittent blurred vision. Reports increased nocturia (2-3x/night) and unintentional 6 lb weight loss. No chest pain, no focal neuro deficits. Family history significant for type 2 diabetes (father).
+Vitals
+BP 138/86 mmHg   HR 78   Temp 98.4F   BMI 31.2 kg/m2
+Assessment
+1. Type 2 Diabetes Mellitus, newly diagnosed (E11.9). HbA1c 7.8%.
+2. Essential hypertension (I10).
+3. Mixed hyperlipidemia (E78.2).
+Plan
+Initiate metformin 500 mg PO BID with meals; titrate to 1000 mg BID over 4 weeks as tolerated.
+Medical nutrition therapy; >=150 min/week moderate-intensity physical activity.
+Referral to ophthalmology for dilated diabetic retinopathy screening.
+Order urine albumin-to-creatinine ratio (microalbuminuria screen).
+Repeat HbA1c in 3 months. Continue lisinopril 10 mg daily.
+Follow-up appointment in 3 months, or sooner as needed.
+
+--- Page 2 ---
+Patient Instructions
+You have been diagnosed with type 2 diabetes. This means your blood sugar (glucose) is higher than the normal range. Your HbA1c, a 3-month average of your blood sugar, is 7.8% (a value of 6.5% or higher indicates diabetes).
+Start metformin as directed with food to reduce stomach upset. Pick up your prescription at your pharmacy. Take your medication daily.
+When to Seek Care
+Symptoms of low blood sugar: shakiness, sweating, confusion, rapid heartbeat.
+Persistent vomiting, very high blood sugar, or vision changes that worsen.
+Electronically signed by Sarah Lee, MD on 2026-06-12 18:42
+
+
+=== FILE: labs_a1c.pdf (Laboratory Results) ===
+--- Page 1 ---
+Riverside Laboratory
+Laboratory Results
+Patient: Alex Rivera        MRN: 00482913
+Collected: 2026-06-12        Resulted: 2026-06-13        Ordering Provider: Sarah Lee, MD
+Diabetes Panel
+Hemoglobin A1c: 7.8 %  (H)   Reference: <5.7 normal; 5.7-6.4 prediabetes; >=6.5 diabetes
+Estimated Average Glucose (eAG): 177 mg/dL
+Fasting Plasma Glucose: 152 mg/dL  (H)   Reference: 70-99 mg/dL
+Interpretation: Results are consistent with type 2 diabetes mellitus. HbA1c of 7.8% is above the diagnostic threshold of 6.5%.
+
+--- Page 2 ---
+Lipid Panel
+Total Cholesterol: 222 mg/dL  (H)   Reference: <200
+LDL Cholesterol: 138 mg/dL  (H)   Reference: <100
+HDL Cholesterol: 41 mg/dL  (L)   Reference: >40
+Triglycerides: 180 mg/dL  (H)   Reference: <150
+Comprehensive Metabolic Panel (selected)
+Creatinine: 0.9 mg/dL   eGFR: 92 mL/min/1.73m2 (normal renal function)
+Potassium: 4.2 mmol/L   Sodium: 139 mmol/L
+
+
+=== FILE: med_list.pdf (Medication List) ===
+--- Page 1 ---
+Riverside Family Medicine
+Active Medication List
+Patient: Alex Rivera        MRN: 00482913        Updated: 2026-06-12
+metformin 500 mg tablet - take 1 tablet by mouth twice daily with meals. STATUS: NEW (2026-06-12), prescribed by Sarah Lee, MD.
+lisinopril 10 mg tablet - take 1 tablet by mouth once daily. STATUS: Active since 2024 (hypertension).
+Allergies
+Penicillin - documented reaction: rash (recorded 2019).
+Note: Patient has previously stated this allergy may be inaccurate.
+
+
+=== FILE: billing.pdf (Estimated Costs) ===
+--- Page 1 ---
+Riverside Family Medicine
+Estimated Costs - This Visit & Plan
+Patient: Alex Rivera        MRN: 00482913        Plan: BlueCross PPO
+Estimated Out-of-Pocket
+Office visit today (established patient) - copay: $30 after insurance.
+Metformin 500 mg (generic), 90-day supply - about $12 at CVS with your plan.
+Lab work (HbA1c + lipid panel) - about $25 after insurance.
+Diabetic eye exam (ophthalmology referral) - about $40 copay.
+Estimated total out-of-pocket this month: about $107.
+Actual amounts vary by plan and deductible status. Generic savings and financial-assistance programs are available - ask the front desk.
+
+
+=== FILE: problem_list.pdf (Problem List) ===
+--- Page 1 ---
+Riverside Family Medicine
+Active Problem List
+Patient: Alex Rivera        MRN: 00482913
+1. Type 2 Diabetes Mellitus (E11.9) - onset 2026-06-12.
+2. Essential Hypertension (I10) - onset 2023.
+3. Mixed Hyperlipidemia (E78.2) - onset 2024.
+Allergies
+Penicillin - recorded 2019 (rash). Patient disputes this allergy.
+
+
+=== FILE: prior_visit_2025.pdf (Prior Visit - Annual Physical 2025) ===
+--- Page 1 ---
+Riverside Family Medicine
+Annual Physical - Prior Visit
+Patient: Alex Rivera        Date of Service: 2025-05-10        Provider: Sarah Lee, MD
+Fasting Plasma Glucose: 110 mg/dL (impaired fasting glucose / prediabetes range).
+Hemoglobin A1c: 6.0 % (prediabetes range: 5.7-6.4).
+BMI 30.1 kg/m2. BP 134/84.
+Assessment: Prediabetes. Plan: Counseled on lifestyle modification, diet, and exercise. Recheck in 1 year.
+
+
+=== FILE: prior_visit_2024.pdf (Prior Visit 2024) ===
+--- Page 1 ---
+Riverside Family Medicine
+Office Visit - Prior Visit
+Patient: Alex Rivera        Date of Service: 2024-04-22        Provider: Sarah Lee, MD
+Fasting Plasma Glucose: 102 mg/dL.
+BP 142/90 mmHg (elevated). Started lisinopril 10 mg daily for hypertension.
+Assessment: Essential hypertension, newly treated. Borderline fasting glucose; monitor.

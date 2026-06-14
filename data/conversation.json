@@ -1,0 +1,153 @@
+{
+  "patient": { "name": "Alex", "age": 41, "condition": "Type 2 Diabetes", "provider": "Dr. Lee" },
+  "greetingCallLabel": "Your post-visit plan is ready",
+  "intro": [
+    {
+      "persona": "main",
+      "text": "Hi Alex, I'm Remy — your care guide. How are you feeling? Let me have Jack pull your latest records so we're on the same page."
+    }
+  ],
+  "recordsAgent": {
+    "key": "jack",
+    "title": "Pulling your latest records",
+    "tasks": ["Opening your chart", "Reading today's visit note", "Checking what your care team handled"]
+  },
+  "summary": {
+    "persona": "main",
+    "text": "Okay, Jack's back. In short: you were diagnosed with type 2 diabetes today — your blood sugar's a bit high, but it's very manageable, and your team already handled a few things. What would help most? Ask me anything, or tap a suggestion."
+  },
+  "careTeamHandled": [
+    { "id": "notes", "icon": "file", "title": "Visit notes filed", "detail": "Dr. Lee documented today's visit", "by": "Dr. Lee" },
+    { "id": "rx_sent", "icon": "pill", "title": "Metformin sent to your pharmacy", "detail": "500 mg · CVS, 12 Main St", "by": "Dr. Lee" },
+    { "id": "referral_ordered", "icon": "eye", "title": "Eye-exam referral ordered", "detail": "Diabetic retinopathy screening", "by": "Dr. Lee" },
+    { "id": "labs_posted", "icon": "flask", "title": "Lab results posted", "detail": "A1c & lipid panel", "by": "Lab" }
+  ],
+  "handoff": { "persona": "main", "text": "" },
+  "initialSuggestions": ["diagnosis", "metformin", "next_steps", "peer"],
+  "topics": {
+    "diagnosis": {
+      "label": "What does my diagnosis mean?",
+      "userText": "What does my diagnosis actually mean?",
+      "response": {
+        "text": "Type 2 diabetes just means your blood sugar runs higher than ideal. Your A1c — a three-month average — is 7.8%, and 6.5% or above counts as diabetes, so you're just over the line. It's common, very treatable, and not an emergency.",
+        "citation": { "file": "labs_a1c.pdf", "page": 1, "quote": "Hemoglobin A1c: 7.8 %", "label": "Lab Results — A1c & Lipids" }
+      },
+      "followups": ["metformin", "next_steps", "records_check"]
+    },
+    "metformin": {
+      "label": "Do I need metformin?",
+      "userText": "Do I really need to take metformin?",
+      "response": {
+        "text": "Metformin is the standard first medication — it helps your body use insulin better, it's inexpensive, and most people do fine on it with food. Dr. Lee started you at 500 mg twice a day; it's worth starting, and you can revisit it at your follow-up.",
+        "citation": { "file": "visit_note.pdf", "page": 1, "quote": "Initiate metformin 500 mg PO BID with meals", "label": "After-Visit Note" }
+      },
+      "followups": ["pickup", "reminder", "next_steps"]
+    },
+    "next_steps": {
+      "label": "What are my next steps?",
+      "userText": "What should I do next?",
+      "response": {
+        "text": "Three things: pick up your metformin and take it with meals, recheck your A1c in about three months, and get a quick eye screening. Your team already sent the prescription and referral — I can handle the rest whenever you're ready.",
+        "citation": { "file": "visit_note.pdf", "page": 1, "quote": "Repeat HbA1c in 3 months", "label": "After-Visit Note" }
+      },
+      "followups": ["pickup", "book_followup", "find_eye"]
+    },
+    "pickup": {
+      "label": "Help me get my prescription",
+      "userText": "Can you help me get my prescription?",
+      "response": {
+        "text": "Your metformin's already waiting at the CVS on Main Street, ready this afternoon.",
+        "citation": { "file": "med_list.pdf", "page": 1, "quote": "metformin 500 mg tablet", "label": "Medication List" }
+      },
+      "propose": {
+        "prompt": "Want me to text you directions and a reminder to pick it up?",
+        "subAgent": { "key": "cal", "title": "Setting up your pickup", "tasks": ["Confirming CVS on Main St", "Texting you directions", "Setting a 3:30 PM reminder"] },
+        "card": { "id": "pickup", "icon": "bell", "title": "Pickup reminder + directions", "detail": "CVS, 12 Main St · ready ~4:00 PM" },
+        "confirmedText": "Done — directions and a 3:30 PM reminder are on your phone."
+      },
+      "followups": ["reminder", "next_steps"]
+    },
+    "reminder": {
+      "label": "Set a medication reminder",
+      "userText": "Can you remind me to take my medication?",
+      "response": {
+        "text": "Taking metformin at the same time each day — with dinner works well — makes it much easier to stay consistent.",
+        "citation": { "file": "med_list.pdf", "page": 1, "quote": "metformin 500 mg tablet", "label": "Medication List" }
+      },
+      "propose": {
+        "prompt": "Should I set a gentle daily reminder for 6:30 PM?",
+        "subAgent": { "key": "cal", "title": "Scheduling your reminder", "tasks": ["Creating a daily reminder", "Setting it for 6:30 PM", "Linking it to your metformin"] },
+        "card": { "id": "reminder", "icon": "bell", "title": "Daily medication reminder", "detail": "Metformin · 6:30 PM daily" },
+        "confirmedText": "Set — I'll remind you at 6:30 PM each day."
+      },
+      "followups": ["book_followup", "next_steps"]
+    },
+    "book_followup": {
+      "label": "Book my follow-up",
+      "userText": "Can you book my follow-up?",
+      "response": {
+        "text": "Dr. Lee wants to recheck your A1c in about three months to see how it's trending.",
+        "citation": { "file": "visit_note.pdf", "page": 1, "quote": "Repeat HbA1c in 3 months", "label": "After-Visit Note" }
+      },
+      "propose": {
+        "prompt": "Want me to find a time with Dr. Lee and add it to your calendar?",
+        "subAgent": { "key": "cal", "title": "Booking your follow-up", "tasks": ["Checking Dr. Lee's availability", "Holding Sept 14, 10:00 AM", "Adding it to your calendar"] },
+        "card": { "id": "followup", "icon": "calendar", "title": "Follow-up booked", "detail": "A1c recheck with Dr. Lee · Sep 14, 10:00 AM" },
+        "confirmedText": "Booked — September 14th at 10 AM with Dr. Lee, on your calendar."
+      },
+      "followups": ["find_eye", "next_steps"]
+    },
+    "find_eye": {
+      "label": "Find an eye doctor",
+      "userText": "What about the eye exam?",
+      "response": {
+        "text": "Diabetes can affect your eyes over time, so a yearly screening is wise — your doctor already placed the referral for you.",
+        "citation": { "file": "visit_note.pdf", "page": 1, "quote": "Referral to ophthalmology", "label": "After-Visit Note" }
+      },
+      "propose": {
+        "prompt": "Want me to show in-network eye doctors near you?",
+        "subAgent": { "key": "cal", "title": "Finding eye doctors", "tasks": ["Reading your referral", "Searching in-network optometrists", "Sorting by distance"] },
+        "card": { "id": "eye", "icon": "eye", "title": "In-network eye doctors", "detail": "3 options within 4 miles" },
+        "confirmedText": "Here are three in-network optometrists within four miles — pick whichever's easiest."
+      },
+      "followups": ["peer", "next_steps"]
+    },
+    "peer": {
+      "label": "Connect me with someone like me",
+      "userText": "Can I talk to someone who's going through this?",
+      "response": {
+        "text": "A lot of people feel overwhelmed early on, and hearing from someone who's been there really helps."
+      },
+      "propose": {
+        "prompt": "There's a 38-year-old near you who also has type 2 diabetes and chose to be available to support others. Want me to add them to your connections? I only ever show people who opted in.",
+        "subAgent": { "key": "mira", "title": "Finding a peer", "tasks": ["Searching opted-in members", "Matching by condition + distance", "Preparing an introduction"] },
+        "card": { "id": "peer", "icon": "heart", "title": "Peer added to your connections", "detail": "Message them anytime — no pressure" },
+        "confirmedText": "Added — reach out whenever you're ready, no pressure at all."
+      },
+      "followups": ["next_steps", "done"]
+    },
+    "records_check": {
+      "label": "Is anything in my records wrong?",
+      "userText": "Is everything in my records correct?",
+      "response": {
+        "text": "I did spot something — your chart lists a penicillin allergy, and you've mentioned before it isn't actually yours. You have the right to get that corrected.",
+        "citation": { "file": "med_list.pdf", "page": 1, "quote": "Penicillin - documented reaction: rash", "label": "Medication List" }
+      },
+      "propose": {
+        "prompt": "Want me to flag it for your care team to review and fix?",
+        "subAgent": { "key": "quinn", "title": "Flagging the record error", "tasks": ["Locating the allergy entry", "Filing a correction request", "Notifying your care team"] },
+        "card": { "id": "flag", "icon": "flag", "title": "Record correction flagged", "detail": "Penicillin allergy · sent for review" },
+        "confirmedText": "Flagged — your care team will review and correct it."
+      },
+      "followups": ["next_steps", "done"]
+    },
+    "done": {
+      "label": "I'm all set for now",
+      "userText": "I think I'm good for now.",
+      "isClose": true,
+      "response": {
+        "text": "You did great today, Alex. Everything's in motion, and I'm here whenever you need me. Anything that ever feels serious, reach out to Dr. Lee. Take care."
+      }
+    }
+  }
+}

@@ -1,0 +1,10 @@
+=== FILE: problem_list.pdf (Problem List) ===
+--- Page 1 ---
+Riverside Family Medicine
+Active Problem List
+Patient: Alex Rivera        MRN: 00482913
+1. Type 2 Diabetes Mellitus (E11.9) - onset 2026-06-12.
+2. Essential Hypertension (I10) - onset 2023.
+3. Mixed Hyperlipidemia (E78.2) - onset 2024.
+Allergies
+Penicillin - recorded 2019 (rash). Patient disputes this allergy.

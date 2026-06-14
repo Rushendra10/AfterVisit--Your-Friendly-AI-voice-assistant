@@ -1,0 +1,21 @@
+=== FILE: labs_a1c.pdf (Laboratory Results) ===
+--- Page 1 ---
+Riverside Laboratory
+Laboratory Results
+Patient: Alex Rivera        MRN: 00482913
+Collected: 2026-06-12        Resulted: 2026-06-13        Ordering Provider: Sarah Lee, MD
+Diabetes Panel
+Hemoglobin A1c: 7.8 %  (H)   Reference: <5.7 normal; 5.7-6.4 prediabetes; >=6.5 diabetes
+Estimated Average Glucose (eAG): 177 mg/dL
+Fasting Plasma Glucose: 152 mg/dL  (H)   Reference: 70-99 mg/dL
+Interpretation: Results are consistent with type 2 diabetes mellitus. HbA1c of 7.8% is above the diagnostic threshold of 6.5%.
+
+--- Page 2 ---
+Lipid Panel
+Total Cholesterol: 222 mg/dL  (H)   Reference: <200
+LDL Cholesterol: 138 mg/dL  (H)   Reference: <100
+HDL Cholesterol: 41 mg/dL  (L)   Reference: >40
+Triglycerides: 180 mg/dL  (H)   Reference: <150
+Comprehensive Metabolic Panel (selected)
+Creatinine: 0.9 mg/dL   eGFR: 92 mL/min/1.73m2 (normal renal function)
+Potassium: 4.2 mmol/L   Sodium: 139 mmol/L

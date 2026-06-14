@@ -1,0 +1,8 @@
+=== FILE: prior_visit_2024.pdf (Prior Visit 2024) ===
+--- Page 1 ---
+Riverside Family Medicine
+Office Visit - Prior Visit
+Patient: Alex Rivera        Date of Service: 2024-04-22        Provider: Sarah Lee, MD
+Fasting Plasma Glucose: 102 mg/dL.
+BP 142/90 mmHg (elevated). Started lisinopril 10 mg daily for hypertension.
+Assessment: Essential hypertension, newly treated. Borderline fasting glucose; monitor.

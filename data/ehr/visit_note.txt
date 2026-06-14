@@ -1,0 +1,32 @@
+=== FILE: visit_note.pdf (After-Visit Clinical Note) ===
+--- Page 1 ---
+Riverside Family Medicine
+After-Visit Clinical Note
+Patient: Alex Rivera        DOB: 03/14/1985 (Age 41)        Sex: M
+MRN: 00482913        Date of Service: 2026-06-12        Provider: Sarah Lee, MD
+Chief Complaint
+Fatigue, increased thirst, and intermittent blurred vision for approximately 6 weeks.
+History of Present Illness
+41-year-old male presents with a 6-week history of fatigue, polydipsia, polyuria, and intermittent blurred vision. Reports increased nocturia (2-3x/night) and unintentional 6 lb weight loss. No chest pain, no focal neuro deficits. Family history significant for type 2 diabetes (father).
+Vitals
+BP 138/86 mmHg   HR 78   Temp 98.4F   BMI 31.2 kg/m2
+Assessment
+1. Type 2 Diabetes Mellitus, newly diagnosed (E11.9). HbA1c 7.8%.
+2. Essential hypertension (I10).
+3. Mixed hyperlipidemia (E78.2).
+Plan
+Initiate metformin 500 mg PO BID with meals; titrate to 1000 mg BID over 4 weeks as tolerated.
+Medical nutrition therapy; >=150 min/week moderate-intensity physical activity.
+Referral to ophthalmology for dilated diabetic retinopathy screening.
+Order urine albumin-to-creatinine ratio (microalbuminuria screen).
+Repeat HbA1c in 3 months. Continue lisinopril 10 mg daily.
+Follow-up appointment in 3 months, or sooner as needed.
+
+--- Page 2 ---
+Patient Instructions
+You have been diagnosed with type 2 diabetes. This means your blood sugar (glucose) is higher than the normal range. Your HbA1c, a 3-month average of your blood sugar, is 7.8% (a value of 6.5% or higher indicates diabetes).
+Start metformin as directed with food to reduce stomach upset. Pick up your prescription at your pharmacy. Take your medication daily.
+When to Seek Care
+Symptoms of low blood sugar: shakiness, sweating, confusion, rapid heartbeat.
+Persistent vomiting, very high blood sugar, or vision changes that worsen.
+Electronically signed by Sarah Lee, MD on 2026-06-12 18:42

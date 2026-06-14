@@ -1,0 +1,12 @@
+=== FILE: billing.pdf (Estimated Costs) ===
+--- Page 1 ---
+Riverside Family Medicine
+Estimated Costs - This Visit & Plan
+Patient: Alex Rivera        MRN: 00482913        Plan: BlueCross PPO
+Estimated Out-of-Pocket
+Office visit today (established patient) - copay: $30 after insurance.
+Metformin 500 mg (generic), 90-day supply - about $12 at CVS with your plan.
+Lab work (HbA1c + lipid panel) - about $25 after insurance.
+Diabetic eye exam (ophthalmology referral) - about $40 copay.
+Estimated total out-of-pocket this month: about $107.
+Actual amounts vary by plan and deductible status. Generic savings and financial-assistance programs are available - ask the front desk.

@@ -1,0 +1,10 @@
+=== FILE: med_list.pdf (Medication List) ===
+--- Page 1 ---
+Riverside Family Medicine
+Active Medication List
+Patient: Alex Rivera        MRN: 00482913        Updated: 2026-06-12
+metformin 500 mg tablet - take 1 tablet by mouth twice daily with meals. STATUS: NEW (2026-06-12), prescribed by Sarah Lee, MD.
+lisinopril 10 mg tablet - take 1 tablet by mouth once daily. STATUS: Active since 2024 (hypertension).
+Allergies
+Penicillin - documented reaction: rash (recorded 2019).
+Note: Patient has previously stated this allergy may be inaccurate.

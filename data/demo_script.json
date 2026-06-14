@@ -1,0 +1,148 @@
+{
+  "patient": { "name": "Alex", "age": 41, "condition": "Type 2 Diabetes", "provider": "Dr. Lee" },
+  "greetingCallLabel": "Your post-visit plan is ready",
+  "steps": [
+    {
+      "type": "say",
+      "persona": "main",
+      "text": "Hi Alex, I'm Remy — your care guide. How did your visit with Dr. Lee go? I hope you're feeling okay. Your records were just updated, so let's turn today's visit into a simple plan."
+    },
+    {
+      "type": "spawn",
+      "persona": "main",
+      "text": "I'll have Jack pull your latest records, and Jill will be right here to answer anything you want to understand.",
+      "agents": [
+        {
+          "persona": "jack",
+          "task": "Pulling your latest records",
+          "status": "working",
+          "thoughts": [
+            "Opening your chart…",
+            "Reading labs_a1c.pdf…",
+            "Comparing against your 2024 and 2025 visits…",
+            "Checking new orders and referrals…"
+          ]
+        },
+        {
+          "persona": "jill",
+          "task": "Standing by for your questions",
+          "status": "working",
+          "thoughts": ["Reviewing your after-visit note…", "Ready to explain anything in plain language…"]
+        }
+      ]
+    },
+    {
+      "type": "say",
+      "persona": "jack",
+      "text": "Got it — here's what's new since your visit. Your A1c and lipid results just posted, your metformin prescription was sent to your pharmacy, and a diabetic eye-exam referral is pending. One thing stood out: your fasting glucose has been climbing — 102 in 2024, 110 last year, and 152 now.",
+      "citation": {
+        "file": "prior_visit_2025.pdf",
+        "page": 1,
+        "quote": "Fasting Plasma Glucose: 110 mg/dL",
+        "label": "Annual Physical — 2025"
+      }
+    },
+    {
+      "type": "say",
+      "persona": "jill",
+      "text": "Let's make sense of what the doctor told you. Go ahead and ask me anything about your visit — just hold the talk button and speak."
+    },
+    {
+      "type": "userTurn",
+      "live": true,
+      "text": "My doctor said my sugar is just a little high and to watch my diet. But my A1c is 7.8 — is that actually diabetes? And do I really need to take metformin?"
+    },
+    {
+      "type": "say",
+      "persona": "jill",
+      "text": "I hear you — it's confusing when it's framed as 'just a little high.' Here's the straight answer: your HbA1c is 7.8%, and anything at or above 6.5% meets the definition of diabetes. So yes, this is type 2 diabetes — not just borderline. Your A1c is a three-month average of your blood sugar. The good news: 7.8% is very treatable. Metformin is the standard first medication — it helps your body use insulin better, it's inexpensive, and most people tolerate it well, especially with food. It's worth starting, and you can always revisit the plan with Dr. Lee at your follow-up.",
+      "citation": {
+        "file": "labs_a1c.pdf",
+        "page": 1,
+        "quote": "Hemoglobin A1c: 7.8 %",
+        "label": "Lab Results — A1c & Lipids"
+      }
+    },
+    {
+      "type": "say",
+      "persona": "jill",
+      "text": "Here's your plan for the next few weeks — and I'll take care of the busywork right now."
+    },
+    {
+      "type": "tool",
+      "persona": "jill",
+      "text": "Your metformin is ready for pickup at 4 PM at the CVS on Main Street — I've sent directions to your phone.",
+      "card": {
+        "id": "rx",
+        "tool": "order_rx",
+        "icon": "pill",
+        "title": "Metformin sent to CVS",
+        "detail": "500 mg · twice daily with meals · ready today 4:00 PM · CVS, 12 Main St (0.6 mi)"
+      }
+    },
+    {
+      "type": "tool",
+      "persona": "jill",
+      "text": "I booked your three-month A1c recheck with Dr. Lee for September 14th and added it to your calendar.",
+      "card": {
+        "id": "followup",
+        "tool": "book_followup",
+        "icon": "calendar",
+        "title": "Follow-up booked",
+        "detail": "HbA1c recheck with Dr. Lee · Sep 14, 2026 · 10:00 AM · added to calendar"
+      }
+    },
+    {
+      "type": "tool",
+      "persona": "jill",
+      "text": "And I sent your diabetic eye-exam referral — there are three in-network optometrists near you.",
+      "card": {
+        "id": "refer",
+        "tool": "refer",
+        "icon": "eye",
+        "title": "Eye-exam referral sent",
+        "detail": "Diabetic retinopathy screening · 3 in-network options within 4 mi"
+      }
+    },
+    {
+      "type": "tool",
+      "persona": "jill",
+      "text": "Last thing — I set a gentle daily reminder to take your metformin with dinner.",
+      "card": {
+        "id": "reminder",
+        "tool": "set_reminder",
+        "icon": "bell",
+        "title": "Daily reminder set",
+        "detail": "Take metformin with dinner · 6:30 PM daily"
+      }
+    },
+    {
+      "type": "flag",
+      "persona": "jill",
+      "text": "I also noticed your chart still lists a penicillin allergy that you've said isn't yours. I've flagged it for your care team to review and correct.",
+      "card": {
+        "id": "flag",
+        "tool": "flag_record_error",
+        "icon": "flag",
+        "title": "Record correction flagged",
+        "detail": "Penicillin allergy marked for your care team to review"
+      }
+    },
+    {
+      "type": "peerOffer",
+      "persona": "jill",
+      "text": "One last thing — only if you'd like it. A lot of people feel overwhelmed in these first few weeks. Someone near you, who chose to be available to support others, is a close match.",
+      "peer": {
+        "descriptor": "A 38-year-old, about 2 miles away, also recently diagnosed with type 2 diabetes",
+        "sharedCondition": "Type 2 Diabetes",
+        "distance": "2 miles away",
+        "privacyLine": "I only ever show people who opted in to be reachable — and you control what you share."
+      }
+    },
+    {
+      "type": "close",
+      "persona": "main",
+      "text": "That's everything, Alex — your prescription, your follow-up, your eye exam, and a daily reminder are all handled, and that record error is flagged. I'm here whenever you need to make sense of your care. And anything that feels serious, please raise it with Dr. Lee at your follow-up."
+    }
+  ]
+}
