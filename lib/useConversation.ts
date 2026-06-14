@@ -88,6 +88,11 @@ function detectActionIntent(text: string): string | null {
   return null;
 }
 
+// Alex asking to actually understand / simplify the visit — the moment Jack's
+// records are genuinely used (so his card spawns here, not on the opening hello).
+const WANTS_RECORDS =
+  /simplif|explain|break (it|that|this|down)|didn'?t (understand|get|catch|follow)|don'?t (understand|get|really)|do ?n'?t really|make sense|in (simple|plain)|layman|help me understand|walk me through|go over|dumb (it )?down|understand much|what (does|do|did) .*(mean|happen|say)/i;
+
 // What the companion just OFFERED to do ("want me to ...?") — armed for a yes.
 function detectOffer(text: string): string | null {
   const t = text.toLowerCase();
@@ -110,7 +115,8 @@ export function useConversation() {
   const liveRef = useRef<RealtimeController | null>(null);
   const liveReadyRef = useRef(false);
   const liveUserMsgRef = useRef<string | null>(null);
-  const firstUserTurnRef = useRef(false);
+  const jackSpawnedRef = useRef(false); // Jack's card appears only when records are actually used
+  const newUserBubbleRef = useRef(true); // next user transcript starts a fresh bubble
   const connectTimer = useRef<ReturnType<typeof setTimeout> | null>(null);
   const pendingActionRef = useRef<string | null>(null); // action Remy just offered
   const doneActionsRef = useRef<Set<string>>(new Set());
@@ -193,20 +199,30 @@ export function useConversation() {
     useStore.getState().addCard({ ...a.card, status: "done" });
   };
 
+  // Jack's card + care-plan surface only when the records are genuinely used.
+  const spawnRecords = () => {
+    if (jackSpawnedRef.current) return;
+    jackSpawnedRef.current = true;
+    void spawnSubAgent(MODEL.recordsAgent);
+    useStore.getState().setCareTeamHandled(MODEL.careTeamHandled);
+    useStore.getState().setCitation(VISIT_NOTE);
+  };
+
   const onLiveUser = (text: string, final: boolean) => {
     if (!text) return;
-    if (liveUserMsgRef.current) useStore.getState().updateMessage(liveUserMsgRef.current, text);
-    else liveUserMsgRef.current = useStore.getState().addMessage({ role: "user", persona: "user", text });
-    if (!final) return;
-    liveUserMsgRef.current = null;
-
-    // first reply -> Jack pulls records + care plan + visit note
-    if (!firstUserTurnRef.current) {
-      firstUserTurnRef.current = true;
-      void spawnSubAgent(MODEL.recordsAgent);
-      useStore.getState().setCareTeamHandled(MODEL.careTeamHandled);
-      useStore.getState().setCitation(VISIT_NOTE);
+    // ONE bubble per user turn. A new turn only begins after Remy has spoken, so
+    // mid-utterance VAD / response.created cycles update the same bubble instead
+    // of spawning a new one per partial transcript.
+    if (newUserBubbleRef.current || !liveUserMsgRef.current) {
+      liveUserMsgRef.current = useStore.getState().addMessage({ role: "user", persona: "user", text });
+      newUserBubbleRef.current = false;
+    } else {
+      useStore.getState().updateMessage(liveUserMsgRef.current, text);
     }
+    if (!final) return;
+
+    // Jack appears the moment Alex asks to understand / simplify — not on hello.
+    if (WANTS_RECORDS.test(text)) spawnRecords();
 
     // voice-triggered action: an explicit request, or a "yes" to what Remy offered
     const key =
@@ -219,6 +235,11 @@ export function useConversation() {
   const onLiveRemy = (text: string) => {
     useStore.getState().setSpeaking(null);
     useStore.getState().addMessage({ role: "agent", persona: "main", text });
+    // Remy spoke -> close the user's bubble so the next thing Alex says is fresh.
+    liveUserMsgRef.current = null;
+    newUserBubbleRef.current = true;
+    // safety net: if Remy starts explaining the chart, make sure Jack is shown.
+    if (/\b(a1c|7\.8|metformin|diabet|diagnos|cholesterol|ldl|lipid)\b/i.test(text)) spawnRecords();
     const c = bestCitation(text);
     if (c) useStore.getState().setCitation(c); // highlight the actual line Remy cited
     const offer = detectOffer(text);
@@ -238,7 +259,8 @@ export function useConversation() {
 
   const startLiveIntro = async () => {
     usedRef.current = new Set();
-    firstUserTurnRef.current = false;
+    jackSpawnedRef.current = false;
+    newUserBubbleRef.current = true;
     liveUserMsgRef.current = null;
     liveReadyRef.current = false;
     pendingActionRef.current = null;
@@ -421,7 +443,8 @@ export function useConversation() {
     stopSpeaking();
     startedRef.current = false;
     usedRef.current = new Set();
-    firstUserTurnRef.current = false;
+    jackSpawnedRef.current = false;
+    newUserBubbleRef.current = true;
     liveUserMsgRef.current = null;
     pendingActionRef.current = null;
     doneActionsRef.current = new Set();
@@ -442,7 +465,8 @@ export function useConversation() {
     startedRef.current = false;
     scriptRunningRef.current = false;
     usedRef.current = new Set();
-    firstUserTurnRef.current = false;
+    jackSpawnedRef.current = false;
+    newUserBubbleRef.current = true;
     liveUserMsgRef.current = null;
     pendingActionRef.current = null;
     doneActionsRef.current = new Set();
