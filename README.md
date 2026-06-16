@@ -10,11 +10,7 @@ Demo patient: **Alex Rivera**, 41, newly diagnosed **Type 2 Diabetes**. *All cli
 
 ---
 
-# 📋 DevPost Submission (copy-paste ready)
-
-> Copy everything between the lines below straight into DevPost.
-
----
+# 📋 DevPost Submission
 
 ## Inspiration
 
@@ -161,42 +157,6 @@ Sub-agents appear top-right as **distinct-colored cards with a subtle glow** (ma
 
 ---
 
-# 🗂️ Architecture
-
-```
-app/
-  page.tsx                 # orchestrator: StartScreen / PhoneCall / Cockpit
-  api/reason/route.ts      # live brain — spawns the local `claude` CLI over /EHR
-  api/voice/{tts,stt}      # Grok Voice: POST /v1/tts and /v1/stt (browser fallback)
-  api/tools/route.ts       # mock agentic actions
-  api/ehr/route.ts         # EHR document manifest
-components/
-  StartScreen, PhoneCall   # landing + iPhone notification / answer-call screen (with ringtone)
-  ChatTranscript, TalkBar  # Remy-only chat + suggestion chips, Yes/No confirm, live voice bar
-  RecordsStage             # records viewer: switch doc + highlight cited line + blank when ungrounded
-  SubAgentDock             # top-right sub-agent cards (color + subtle glow, running + tasks)
-  ActionsOverlay           # "Your care plan": Handled-by-care-team + With-your-OK buckets
-lib/
-  useConversation.ts       # realtime-first engine: greets, spawns sub-agents, consent-gated actions
-  realtime.ts              # Grok realtime client: mic PCM24k stream, playback, barge-in, transcripts
-  voice.ts                 # Grok/browser scripted voice: single-speaker lock, cache + prefetch
-  store.ts                 # zustand UI state (subAgents, suggestions, pendingConfirm, cards)
-  personas.ts              # Remy (sole voice) + SUB_AGENTS registry (Jack/Cal/Pax/Mira/Quinn)
-  grounding.ts             # best-line citation matcher for live highlighting
-  config.ts, types.ts, ehrDocs.ts
-scripts/
-  voice-proxy.mjs          # ws relay -> wss://api.x.ai/v1/realtime (holds key, injects grounded session)
-  generate-ehr.mjs         # builds the synthetic EHR (PDFs + text + corpus); runs on predev/prebuild
-public/
-  pcm-worklet.js           # AudioWorklet: mic capture -> Float32 frames for realtime
-  ehr/*.pdf                # generated synthetic EHR PDFs
-data/
-  conversation.json        # Remy-narrated scripted fallback model
-  ehr/{docs.json,*.txt,corpus.txt}  # structured + text EHR (rendered + read by /api/reason)
-```
-
----
-
 # 🏆 Sponsor tools
 
 - **Grok Voice (xAI)** — the entire live conversation: realtime voice agent + TTS/STT.
@@ -215,7 +175,3 @@ data/
 | Non-adherent diabetes patients **58% more likely** hospitalized | JAMA Intern Med, 2006 |
 | Non-adherence ≈ **125,000 preventable deaths/yr** + **$100–300B/yr** | CDC MMWR, 2017 |
 
----
-
-> ⚠️ **Educational prototype. Synthetic data only.** Aftervisit supports your care — it is not a
-> substitute for your clinician.
